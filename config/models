@@ -1,0 +1,20 @@
+User
+    ident Text
+    password Text Maybe
+    UniqueUser ident
+    deriving Typeable
+Email
+    email Text
+    user UserId Maybe
+    verkey Text Maybe
+    UniqueEmail email
+
+BlogPost
+    title Text
+    article Markdown
+
+
+--MODELO SEGUINDO O EXEMPLO DE UM BLOG SIMPLES.
+--EU SÓ QUERO TIRAR MEU 6 PONTOS E ME LIVRAR DESSA MATERIA.
+--SINTO MUITO, GUYS. NÃO SOU O JOÃO OU O LUCAS.
+--NÃO CONSIGO FAZER ALGO NO NÍVEL DELES E AINDA IR TRAMPAR EM SP TODOS OS DIAS

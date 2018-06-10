@@ -1,0 +1,49 @@
+# Depois de editar este arquivo, remova a linha a seguir para permitir
+# `yesod keter` fazer o build. 
+# PS: NÃO SEI PORQUE. DEMOREI 2HRS ENCONTRANDO ESSA RESOLUÇÃO NO STACKOVERFLOW.
+user-edited: false
+
+#NÃO TENHO IDEIA DO QUE É UMA <stanzas>
+stanzas:
+
+  # Aplicação Yesod.
+  - type: webapp
+
+    # Nome do Executavel. Normalmente é <nomedoprojeto>.cabal.
+    # Normalmente é criado pela própria framework.
+    
+    # O Path é dado pelo Stack. Se usar CABAL, mudar para
+    # exec: ../dist/build/MyBlog/MyBlog
+    exec: ../dist/bin/MyBlog
+
+    # Opções de linha de comando.
+    args: []
+
+    hosts:
+      # hostname -
+      - www.MyBlog.com
+
+   
+    requires-secure: false
+
+  # Static files.
+  - type: static-files
+    hosts:
+      - static.MyBlog.com
+    root: ../static
+
+   .
+    # directory-listing: true
+
+  # Redirecionamento da dns para www.
+  - type: redirect
+
+    hosts:
+      - MyBlog.com
+    actions:
+      - host: www.MyBlog.com
+        # secure: false
+        # port: 80
+
+    # status: 303
+

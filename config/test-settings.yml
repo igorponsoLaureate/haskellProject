@@ -1,0 +1,6 @@
+database:
+  database: myblog_test
+
+#AQUI TAMBÉM FOI MUDADO DE 'MyBlog_test' para 'myblog_test'.
+#MAIS UMA VEZ A SUPERFERRAMENTA ME DANDO OUTRAS 2HRS DE PROCURA NA INTERNET DE COMO
+#RESOLVER ESSA PICA.
